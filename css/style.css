@@ -533,3 +533,8 @@ a{
     }
    
 }
+@media screen and (max-width:1024px) {
+    .blog-content img {
+        max-width: 90%;
+}
+}
