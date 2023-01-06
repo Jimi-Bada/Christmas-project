@@ -5,6 +5,9 @@
     font-family: 'Inter', sans-serif;
     border: 0 solid #e5e7eb;
 }
+.body-background{
+    background-color: rgba(226, 232, 240, 0.2);
+}
 :root{
     --my-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
     --my-shadow-sm:  0 1px 2px 0 rgba(0,0,0,.05);
@@ -105,7 +108,9 @@ a{
 .user-select-none{
     user-select: none;
 }
-
+.ps2-5{
+    padding-left: 0.75rem;
+}
 /*Header*/
 .header-bg{
     background-color: #1f2937 !important;
@@ -151,10 +156,11 @@ a{
 .cohort span{
     pointer-events: none;
 }
-.cohort span svg{
+.cohort .dropdown-toggle span svg{
     left: 93% !important;
     color: rgb(156 163 175/1);
 }
+
 .border-gray-300 {
     border-color: rgb(209 213 219/1) !important;
 }
@@ -179,6 +185,10 @@ a{
     outline: 2px solid transparent;
     outline-offset: 2px;
 }
+.li-ds37:hover .check-icon{
+   color: #fff !important;
+}
+
 /*Cards*/
 #cards{
     background-color: rgba(226, 232, 240, 0.2);
@@ -267,6 +277,13 @@ a{
     height: 200px;
     cursor: pointer;
 }
+.km-blog-image{
+    background-image: url(https://images.unsplash.com/photo-1457904375453-3e1fc2fc76f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHx0YWJsZSUyMG1hdGhzfGVufDB8fHx8MTY3MTU1NTY0NQ&ixlib=rb-4.0.3&q=80&w=2000);
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    cursor: pointer;
+}
 .kj-blog-image{
     background-image: url(https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fHRvb2xzfGVufDB8fHx8MTY3MTU1NzUwMg&ixlib=rb-4.0.3&q=80&w=2000);
     background-size: cover;
@@ -288,6 +305,7 @@ a{
     height: 200px;
     cursor: pointer;
 }
+
 .blog-image-3{
     background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/clay-banks-U0-r0JMypE0-unsplash.jpg);
     background-size: cover;
@@ -302,6 +320,13 @@ a{
     height: 200px;
     cursor: pointer;
 }
+.km-blog-image-3{
+    background-image: url(https://images.unsplash.com/photo-1633526543814-9718c8922b7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGNhbGVuZGF8ZW58MHx8fHwxNjcxMDk3Njgy&ixlib=rb-4.0.3&q=80&w=2000);
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    cursor: pointer;
+}
 .blog-image-4{
     background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/carlos-muza-hpjSkU2UYSU-unsplash.jpg);
     background-size: cover;
@@ -311,6 +336,20 @@ a{
 }
 .kj-blog-image-4{
     background-image: url(https://images.unsplash.com/photo-1516534775068-ba3e7458af70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fG5lcnZvdXN8ZW58MHx8fHwxNjcwODc1Njg2&ixlib=rb-4.0.3&q=80&w=2000);
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    cursor: pointer;
+}
+.kj-blog-image-5{
+    background-image: url(https://images.unsplash.com/photo-1543425389-f01c86221d15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDZ8fHZpc2liaWxpdHl8ZW58MHx8fHwxNjcyNjgzNjc4&ixlib=rb-4.0.3&q=80&w=2000);
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    cursor: pointer;
+}
+.km-blog-image-4{
+    background-image: url(https://images.unsplash.com/photo-1511225317751-5c2d61819d58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGZpbHRlcnxlbnwwfHx8fDE2NzEwMjgwMjA&ixlib=rb-4.0.3&q=80&w=2000);
     background-size: cover;
     background-position: center center;
     height: 200px;
@@ -350,6 +389,13 @@ a{
     height: 200px;
     cursor: pointer;
 }
+.km1-blog-image-bottom{
+    background-image: url(https://images.unsplash.com/photo-1457904375453-3e1fc2fc76f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHx0YWJsZSUyMG1hdGhzfGVufDB8fHx8MTY3MTU1NTY0NQ&ixlib=rb-4.0.3&q=80&w=2000);
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    cursor: pointer;
+}
 .blog-image-bottom-k{
     background-image: url(https://images.unsplash.com/photo-1516387938699-a93567ec168e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDV8fGxhcHRvcHxlbnwwfHx8fDE2NzEwOTgyNTM&ixlib=rb-4.0.3&q=80&w=2000);
     background-size: cover;
@@ -379,6 +425,13 @@ a{
     height: 200px;
     cursor: pointer;
 }
+.km-blogimage2{
+    background-image: url(https://images.unsplash.com/photo-1633526543814-9718c8922b7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGNhbGVuZGF8ZW58MHx8fHwxNjcxMDk3Njgy&ixlib=rb-4.0.3&q=80&w=2000);
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    cursor: pointer;
+}
 .s-blogimage2{
     background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/clay-banks-U0-r0JMypE0-unsplash.jpg);
     background-size: cover;
@@ -396,6 +449,13 @@ a{
 
 .s-blogimage3{
     background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/carlos-muza-hpjSkU2UYSU-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+    cursor: pointer;
+}
+.km-blogimage3{
+    background-image: url(https://images.unsplash.com/photo-1511225317751-5c2d61819d58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGZpbHRlcnxlbnwwfHx8fDE2NzEwMjgwMjA&ixlib=rb-4.0.3&q=80&w=2000);
     background-size: cover;
     background-position: center center;
     height: 200px;

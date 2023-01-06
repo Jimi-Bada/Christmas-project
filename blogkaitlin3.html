@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>blog post</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link
@@ -15,9 +15,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    
   </head>
-  <body class="body-background">
+  <body>
     <section id="header">
       <div class="header-bg position-relative">
         <div
@@ -29,7 +28,7 @@
             >
               <div class="flex min-w">
                 <h2 class="text-white fw-bold mb-0 fs lh-md">
-                  How to Create a Dynamic Measure on Tableau
+                  How to calculate the differences between dates in Tableau
                 </h2>
               </div>
             </div>
@@ -37,7 +36,7 @@
               class="header-txt d-md-flex justify-content-md-between align-items-md-center mt-2"
             >
               <div class="flex min-w">
-                <p class="text-white mb-0 lh-sm fs-7">by Kate Joyce</p>
+                <p class="text-white mb-0 lh-sm fs-7">by Kaitlin MacDonnell</p>
               </div>
             </div>
           </div>
@@ -50,122 +49,154 @@
       >
         <div class="blog-content max-w-full">
           <p>
-            In this blog I'm going to demonstrate how to make dynamic measures
-            on Tableau which will allow us to switch between two different
-            measures. I will do this using the Sample Superstore Data.
+            As part of my data school training this week, I have learned how to
+            use dates in tableau to find valuable insights. I will take you
+            through how calculate the differences between dates for use in
+            visualisations and calculations. This can be useful for displaying
+            data over time, comparing different time periods, or analysing
+            trends and patterns.
           </p>
-          <ol>
-            <li>To start, we need to open up a blank worksheet on Tableau.</li>
-          </ol>
           <p>
-            2. Drag the 'Order Date' into the Columns table. We need to change
-            this to a Week by clicking the little arrow to the right of our
-            'Year(Order Date).
+            I will use a dataset on a Superstore, including dates for when each
+            product was ordered and when it has been shipped. I will create a
+            new calculated field showing the time it takes for each product to
+            be shipped, in other words, the difference between order and ship
+            date. I will then create a bar chart visualising these insights.
+          </p>
+          <p>
+            To create a ship time calculated field, first you want to connect
+            Tableau to a data scource that contains the dates you want to use.
+            This could be a data file, a database, or a web-based data source.
+          </p>
+          <p>1. &nbsp; &nbsp; Create a calculated field.</p>
+          <p>
+            Once the data source is connected, you can create a calculated field
+            to define
+          </p>
+          <p>
+            the range of dates. To do this, click on the "Analysis" menu and
+            select "Create
+          </p>
+          <p>Calculated Field".</p>
+          <p>
+            2. Enter a name for the calculated field and define the range of
+            dates. In the calculated field editor, give the calculated field a
+            name and specify the range of dates using the appropriate functions
+            and operators.
+          </p>
+          <p>
+            For example for my calculated field, using the Superstore data
+            source, I will name my calculated field ‘Ship Time’. I will then use
+            the DATEDIFF() function. I found this function by searching in the
+            search panel to the right.
+          </p>
+          <p>
+            This function returns the difference between two dates where
+            start_date is subtracted from end_date.
           </p>
           <figure class="kg-card kg-image-card">
             <img
-              src="https://www.thedataschool.co.uk/content/images/2022/12/image-235.png"
+              src="https://www.thedataschool.co.uk/content/images/2022/12/Picture1-blog-3.png"
               class="kg-image d-block img-fluid"
               alt=""
               loading="lazy"
-              width="596"
-              height="1280"
+              width="626"
+              height="217"
             />
           </figure>
           <p>
-            3. Next we need to make a parameter which will allow us to switch
-            between our two chosen measures. You can find this option in the
-            down arrow at the top of the data pane. Once chosen, you can rename
-            you parameter to 'Dynamic Measure' and change the data type to
-            'String'. Under Allowable values, select 'List' and type in your
-            chosen measures. For this demo we will use 'Sales' and 'Profit'.
-            NOTE: these must be written the same way that they appear in the
-            data set i.e with capital letters.
+            For this function you also need to specify the date part. This is
+            the unit of date you want the function to read. For example do you
+            want a range of days, months, years etc?
           </p>
+          <p>
+            For this calculation, I want to find the number of
+            <strong>days </strong>it took, so I am going to put ‘day’ as the
+            date_part. Be careful here, it tableau is very specific and will
+            only accept singular words: so day not day<strong>s</strong>, month
+            not month<strong>s</strong>.
+          </p>
+          <p>Your calculation should look like this:</p>
           <figure class="kg-card kg-image-card">
             <img
-              src="https://www.thedataschool.co.uk/content/images/2022/12/image-225.png"
+              src="https://www.thedataschool.co.uk/content/images/2022/12/Picture2blog-2.png"
               class="kg-image d-block img-fluid"
               alt=""
               loading="lazy"
-              width="1636"
-              height="1904"
+              width="1599"
+              height="1114"
             />
           </figure>
           <p>
-            4. Once created, click on the arrow beside our 'Dynamic Measure'
-            (this can be found in the Parameters pane) and select 'Show
-            Parameter'. This will be crutial later.
+            3. Add the calculated field to the visualization. Once the
+            calculated field is created, you can add it to the visualization by
+            dragging it from the "Data" pane and dropping it onto the
+            appropriate shelf or axis.
           </p>
           <p>
-            5. Next, we need to make a calculated field so that our selection
-            will be interchangeable. To do this, select the 'Create Calculated
-            Field' option which is above the 'Create Parameter' option, as used
-            above. Here we can call it ' Dynamic Measure Calculation' and enter
-            in what you want to happen once we selected each of our parameters -
-            'Sales' and 'Profit'. Once complete, click OK.
+            4. For my example, I show the number of days each product takes to
+            Ship. To visualise this, I will drag the ‘Ship time’ field to the
+            rows shelf, and order ID to my column. This will produce this bar
+            chart:
           </p>
           <figure class="kg-card kg-image-card">
             <img
-              src="https://www.thedataschool.co.uk/content/images/2022/12/image-228.png"
-              class="kg-image img-fluid d-block"
-              alt=""
-              loading="lazy"
-              width="1563"
-              height="955"
-            />
-          </figure>
-          <p>
-            6. Drag this new Calculation onto the Row shelf and this should
-            change automatically to a Sum - this is correct!
-          </p>
-          <p>
-            7. To test if your Dynamic Measure has worked, simply click on
-            either 'Sales' or 'Profit' in your Dynamic Measure Parameter which
-            we chose to show earlier. This can be found on the right hand side
-            of your workbook.
-          </p>
-          <figure class="kg-card kg-image-card">
-            <img
-              src="https://www.thedataschool.co.uk/content/images/2022/12/image-231.png"
-              class="kg-image img-fluid d-block"
-              alt=""
-              loading="lazy"
-              width="490"
-              height="348"
-            />
-          </figure>
-          <p>
-            8. To wrap up this demo, there is one more part we can add. Since we
-            have added our calculation and parameter onto the worksheet, we can
-            now use this in our title! Simply, double click on the title and
-            clear what is automatically populated. On the right of this window
-            there is an option for 'Insert' and click on our parameter we made.
-          </p>
-          <figure class="kg-card kg-image-card">
-            <img
-              src="https://www.thedataschool.co.uk/content/images/2022/12/image-233.png"
-              class="kg-image img-fluid d-block"
-              alt=""
-              loading="lazy"
-              width="2005"
-              height="1291"
-            />
-          </figure>
-          <p>
-            9. Now, when we click on our 'Profit' and 'Sales' in our parameter,
-            the title will also change! How cool :)
-          </p>
-          <figure class="kg-card kg-image-card">
-            <img
-              src="https://www.thedataschool.co.uk/content/images/2022/12/image-234.png"
+              src="https://www.thedataschool.co.uk/content/images/2022/12/Picture3-blog-3.png"
               class="kg-image d-block img-fluid"
               alt=""
               loading="lazy"
-              width="2350"
-              height="1352"
+              width="1805"
+              height="1199"
             />
           </figure>
+          <p>
+            However this is not our final product. One thing to notice with my
+            data set is that there are multiple products in each order. Looking
+            at the ‘time to ship’ calculated field, you can see tableau has
+            automatically summed all the time it has taken to ship for all the
+            products.
+          </p>
+          <p>
+            For example, if an order has 5 products, each taking 3 days to ship,
+            tableau has calculate the time to ship as 15 days, when actually it
+            has only taken 3 days for all the products in this order to be
+            shipped.
+          </p>
+          <p>
+            To fix this, right click on the Ship Time calculated field and
+            select ‘measure’. From there it should open another drop down. You
+            want to select average here. This corrects the problem, and allows
+            us to find the average Ship time for each order, accounting for
+            multiple products in each order.
+          </p>
+          <figure class="kg-card kg-image-card">
+            <img
+              src="https://www.thedataschool.co.uk/content/images/2022/12/Picture4-blog-3.png"
+              class="kg-image d-block img-fluid"
+              alt=""
+              loading="lazy"
+              width="1805"
+              height="1228"
+            />
+          </figure>
+          <p>
+            Your final product should look like this, after clicking above the
+            bar chart to sort the results, and adding labels to each bar:
+          </p>
+          <figure class="kg-card kg-image-card">
+            <img
+              src="https://www.thedataschool.co.uk/content/images/2022/12/Picture5-blog-3.png"
+              class="kg-image d-block img-fluid"
+              alt=""
+              loading="lazy"
+              width="1805"
+              height="1021"
+            />
+          </figure>
+          <p>
+            I found this a very useful tool when working with dates in tableau,
+            and I hope you found it useful too!
+          </p>
         </div>
       </div>
     </section>
@@ -179,12 +210,12 @@
               <div class="d-flex align-items-center">
                 <img
                   class="w-20 h-20 rounded-circle me-3"
-                  src="https://www.thedataschool.co.uk/content/images/2022/12/AE4F7A57-51BF-45FF-8720-D2BFD38F4414.jpeg"
+                  src="https://www.thedataschool.co.uk/content/images/2022/12/Kaitlin-1.jpg"
                   alt="Avatar"
                 />
                 <div class="author-info">
                   <p class="text-gray-900 fw-bold lh-md fs-5 mb-2">
-                    Kate Joyce
+                    Kaitlin MacDonnell
                   </p>
                   <div class="d-flex">
                     <div class="author-info-placement">
@@ -210,27 +241,29 @@
                   <div
                     class="bg-white mx-auto max-w-sm overflow-hidden rounded-1"
                   >
-                    <a href="blogkate5.html">
-                      <div class="kj-blog-image-5 align-content-center"></div>
+                    <a href="blogkaitlin6.html">
+                      <div
+                        class="km6-blog-image-bottom align-content-center"
+                      ></div>
                       <div class="py-3 px-4">
                         <div class="mb-2">
-                          <a href="blogkate5.html">
+                          <a href="blogkaitlin6.html">
                             <div class="fw-bold text-dark cursor-pointer">
-                              Intro to Dynamic Zone Visibility in Tableau (The Easy Way) - Part 1
+                              A Step by Step Guide to an Alteryx Challenge
                             </div>
                           </a>
                         </div>
-                        <p class="text-gray-700 fs-7 lh-sm mb-1">3 mins read</p>
+                        <p class="text-gray-700 fs-7 lh-sm mb-1">2 mins read</p>
                         <p class="text-gray-700 fs-7 lh-sm mb-0"></p>
                       </div>
                       <div class="d-flex align-items-center px-4 pb-3">
                         <div class="fs-7 lh-sm">
-                          <a href="profilekate.html">
+                          <a href="profilekaitlin.html">
                             <div class="cursor-pointer">
                               <p class="text-gray-900 lh-n mb-0"></p>
                             </div>
                           </a>
-                          <p class="text-gray-600 mb-0">Mon 02 Jan 2022</p>
+                          <p class="text-gray-600 mb-0">Thur 29 Dec 2022</p>
                         </div>
                       </div>
                     </a>
@@ -240,23 +273,24 @@
                   <div
                     class="bg-white mx-auto max-w-sm overflow-hidden rounded-1"
                   >
-                    <a href="blogkate.html">
-                      <div class="blog-image-bottom align-content-center"></div>
+                    <a href="blogkaitlin.html">
+                      <div
+                        class="km1-blog-image-bottom align-content-center"
+                      ></div>
                       <div class="py-3 px-4">
                         <div class="mb-2">
-                          <a href="blogkate.html">
+                          <a href="blogkaitlin.html">
                             <div class="fw-bold text-dark cursor-pointer">
-                              Preparation for the Alteryx Core Certification -
-                              What do the tools do?
+                              How to use the Text Input tool in Alteryx
                             </div>
                           </a>
                         </div>
-                        <p class="text-gray-700 fs-7 lh-sm mb-1">3 mins read</p>
+                        <p class="text-gray-700 fs-7 lh-sm mb-1">2 mins read</p>
                         <p class="text-gray-700 fs-7 lh-sm mb-0"></p>
                       </div>
                       <div class="d-flex align-items-center px-4 pb-3">
                         <div class="fs-7 lh-sm">
-                          <a href="profilekate.html">
+                          <a href="profilekaitlin.html">
                             <div class="cursor-pointer">
                               <p class="text-gray-900 lh-n mb-0"></p>
                             </div>
@@ -271,30 +305,29 @@
                   <div
                     class="bg-white mx-auto max-w-sm overflow-hidden rounded-1"
                   >
-                    <a href="blogkate2.html">
+                    <a href="blogkaitlin3.html">
                       <div
-                        class="blog-image-bottom-k align-content-center"
+                        class=" align-content-center km3-blogimage2"
                       ></div>
                       <div class="py-3 px-4">
                         <div class="mb-2">
-                          <a href="blogkate2.html">
+                          <a href="blogkaitlin3.html">
                             <div class="fw-bold text-dark cursor-pointer">
-                              An (Updated) look back on my Final Dashboard
-                              Application - What could I have done better?
+                                What I would change about my first application to the data school!
                             </div>
                           </a>
                         </div>
-                        <p class="text-gray-700 fs-7 lh-sm mb-1">4 mins read</p>
+                        <p class="text-gray-700 fs-7 lh-sm mb-1">3 mins read</p>
                         <p class="text-gray-700 fs-7 lh-sm mb-0"></p>
                       </div>
                       <div class="d-flex align-items-center px-4 pb-3">
                         <div class="fs-7 lh-sm">
-                          <a href="profilekate.html">
+                          <a href="profilekaitlin.html">
                             <div class="cursor-pointer">
                               <p class="text-gray-900 lh-n mb-0"></p>
                             </div>
                           </a>
-                          <p class="text-gray-600 mb-0">Thur 15 Dec 2022</p>
+                          <p class="text-gray-600 mb-0">Fri 16 Dec 2022</p>
                         </div>
                       </div>
                     </a>
@@ -304,29 +337,30 @@
                   <div
                     class="bg-white mx-auto max-w-sm overflow-hidden rounded-1"
                   >
-                    <a href="blogkate4.html">
+                    <a href="blogkaitlin3.html">
                       <div
-                        class="blog-image-bottom align-content-center blogimage3"
+                        class="blog-image-bottom align-content-center km-blogimage3"
                       ></div>
                       <div class="py-3 px-4">
                         <div class="mb-2">
-                          <a href="blogkate4.html">
+                          <a href="blogkaitlin3.html">
                             <div class="fw-bold text-dark cursor-pointer">
-                              My First Week in the Data School - DS37
+                              How to calculate the differences between dates in
+                              Tableau
                             </div>
                           </a>
                         </div>
-                        <p class="text-gray-700 fs-7 lh-sm mb-1">2 mins read</p>
+                        <p class="text-gray-700 fs-7 lh-sm mb-1">3 mins read</p>
                         <p class="text-gray-700 fs-7 lh-sm mb-0"></p>
                       </div>
                       <div class="d-flex align-items-center px-4 pb-3">
                         <div class="fs-7 lh-sm">
-                          <a href="profilekate.html">
+                          <a href="profilekaitlin.html">
                             <div class="cursor-pointer">
                               <p class="text-gray-900 lh-n mb-0"></p>
                             </div>
                           </a>
-                          <p class="text-gray-600 mb-0">Mon 12 Dec 2022</p>
+                          <p class="text-gray-600 mb-0">Thur 15 Dec 2022</p>
                         </div>
                       </div>
                     </a>
