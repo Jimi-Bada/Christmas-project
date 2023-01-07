@@ -11,7 +11,7 @@
 :root{
     --my-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
     --my-shadow-sm:  0 1px 2px 0 rgba(0,0,0,.05);
-    --my-shadow-lg: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
+    --my-shadow-lg: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.05);
 }
 a{
     text-decoration: none;
@@ -31,14 +31,21 @@ a{
 .me-6{
     margin-right: 2rem;
 }
-.cursor-pointer{
-    cursor: pointer;
+
+.text-gray-800{
+    color: rgb(31 41 55/ 1)
 }
-.text-blue-800{
-    color: rgb(7 89 113/1)
+.text-gray-600{
+    color:rgb(75 85 99/1);
 }
-.bg-blue-100{
-    background-color: rgb(224 242 252/1)
+.text-gray-500{
+    color: rgb(74, 85, 104);
+}
+.text-gray-400{
+    color: rgb(155 163 175/1);
+}
+.bg-gray-200{
+    background-color: rgb(229 231 235/1);
 }
 .text-gray-700{
     color:rgb(55 65 81/1)
@@ -48,6 +55,18 @@ a{
 }
 .lh-n{
     line-height: 1;
+}
+.h-6{
+    height: 1.5rem;
+}
+.w-6{
+    width: 1.5rem;
+}
+.w-4{
+    width: 1rem;
+}
+.h-4{
+    height:1rem
 }
 .w-5{
     width: 1.25rem;
@@ -76,91 +95,41 @@ a{
 .mt-6{
     margin-top: 1.25rem;
 }
-.show{
-    display: block !important;
-}
-.dropdown-toggle::after {
-    content: none;
-}
-.pointer-events-none{
-    pointer-events: none;
-}
-.z-10{
-    z-index: 10;
-}
-.max-h-80{
-    max-height: 80vh;
-}
-.ring-black{
-    --ring-color: rgb(0 0 0/0.05);
-}
-.ring-1{
-    --ring-offset-width: 1px;
-    --ring-offset-color: #fff;
-    --ring-color: rgb(0 0 0/0.05);
-    --ring-offset-shadow: 0 0 #0000;
-    --ring-shadow: 0 0 #0000, 0 0 #0000, var(--my-shadow);
-    box-shadow: var(--ring-offset-shadow), var(--ring-shadow), var(--ring-offset-shadow), var(--ring-shadow);
-}
-.ps-6{
-    padding-left: 2.5rem;
-}
-.user-select-none{
-    user-select: none;
-}
-.ps2-5{
-    padding-left: 0.75rem;
-}
-/*Header*/
-.header-bg{
-    background-color: #1f2937 !important;
-    padding: 13px 0 24px 0;    
+.max-w-sm{
+    max-width:24rem;
 }
 .max-w{
     max-width:1280px;
 }
-.max-w-sm{
-    max-width:24rem;
+.min-w{
+    min-width: 0;  
+} 
+/*hover*/
+.profile-link span:hover, .placement-link span:hover, .author-info-placement span:hover{
+    color: rgb(7 89 133/1);
+    background-color: rgb(224 242 252/1)
+}
+
+/*Header*/
+.header-bg{
+    background-color: #1f2937 !important;   
 }
 .flex{
     flex: 1 1 0%;
-}
-.min-w{
-    min-width: 0;  
-}
-    
+}  
 .lh-md{
-    line-height: 1.75rem;
-}
-.fs{
-    font-size: 1.5rem;
+    line-height: 1.75rem !important;
 }
 .px-6{
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
 }
-
 
 /*Select*/
-.cohort select, .cohort input{
+.cohort select{
     background-image: none !important;
-    padding-left:0.75rem ;
-    padding-right: 2.5rem;
-    box-shadow: 0 0 #0000, 0 0 #0000, var(--my-shadow-sm)
+    padding: 0.5rem 2.5rem 0.5rem 0.75rem !important;
 }
-.cohort button{
-    padding-left:0.75rem ;
-    padding-right: 2.5rem;
-    cursor: default!important;  
-}
-.cohort span{
-    pointer-events: none;
-}
-.cohort .dropdown-toggle span svg{
-    left: 93% !important;
-    color: rgb(156 163 175/1);
-}
-
 .border-gray-300 {
     border-color: rgb(209 213 219/1) !important;
 }
@@ -172,21 +141,15 @@ a{
 .form-select:focus{
     box-shadow: none !important;
 }
-.dropdown-menu li:hover{
-    background-color: #075985;
-}
 .search{
     max-height: 38px;
 }
 .search div{
     padding-right: 0.75rem;
 }
-.input-form{
+input{
     outline: 2px solid transparent;
     outline-offset: 2px;
-}
-.li-ds37:hover .check-icon{
-   color: #fff !important;
 }
 
 /*Cards*/
@@ -194,288 +157,22 @@ a{
     background-color: rgba(226, 232, 240, 0.2);
 }
 
-.cards-row{
-    max-width: 1280px;
-}
-.cards-col{
-    width: 100%;
-}
-.cards-row .ecard{
-    max-width: 24rem;
-    box-shadow: 0 0 #0000, 0 0 #0000, var(--my-shadow)
-}
-.author-image{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/Sherina-1.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 240px;
-    cursor: pointer
-}
-.author-image-2{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/Morgan-Rennie-1.jpg) ;
-}
-.author-image-3{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/Kaitlin-1.jpg) ;
-}
-.author-image-4{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/AE4F7A57-51BF-45FF-8720-D2BFD38F4414.jpeg) ;
-}
-.author-image-5{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/Stanley-1.jpg) ;
-}
-.author-image-6{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/Anita-1.jpg) ;
-}
-.author-image-7{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/Jack-1.jpg) ;
-}
-.author-image-8{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/Curtis-1.jpg) ;
-}
-.author-name-heading{
-    cursor: pointer;
-}
-.text-gray-800{
-    color: rgb(31 41 55/ 1)
-}
-.bg-gray-200{
-    background-color: rgb(229 231 235/1);
-}
 .links a span:hover{
      color:#075985 ;
      background-color: #edf2fe;
 }
-
-/*profile*/
-
-.profile-image{
-    height: 230px;
-    width: 230px;
-    object-fit: cover;
-    max-width:100% ;
-
-}
-.profile-txt{
-    color: #4a5568;
-    overflow:hidden;
-}
-.profile-link span:hover{
-    color: rgb(7 89 133/1);
-    background-color: rgb(224 242 252/1)
-}
-.placement-link span:hover{
-    color: rgb(7 89 133/1);
-    background-color: rgb(224 242 252/1)    
-}
-
-/*blog posts*/
-
-.blog-image{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/gerald-schombs-GBDkr3k96DE-unsplash.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.km-blog-image{
-    background-image: url(https://images.unsplash.com/photo-1457904375453-3e1fc2fc76f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHx0YWJsZSUyMG1hdGhzfGVufDB8fHx8MTY3MTU1NTY0NQ&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.kj-blog-image{
-    background-image: url(https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fHRvb2xzfGVufDB8fHx8MTY3MTU1NzUwMg&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.blog-image-2{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/edvard-alexander-rolvaag-E75ZuAIpCzo-unsplash.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.kj-blog-image-2{
-    background-image: url(https://images.unsplash.com/photo-1516387938699-a93567ec168e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDV8fGxhcHRvcHxlbnwwfHx8fDE2NzEwOTgyNTM&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-
-.blog-image-3{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/clay-banks-U0-r0JMypE0-unsplash.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.kj-blog-image-3{
-    background-image: url(https://images.unsplash.com/photo-1550985543-49bee3167284?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fG1lYXN1cmV8ZW58MHx8fHwxNjcxMDI4MTU2&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.km-blog-image-3{
-    background-image: url(https://images.unsplash.com/photo-1633526543814-9718c8922b7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGNhbGVuZGF8ZW58MHx8fHwxNjcxMDk3Njgy&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.blog-image-4{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/carlos-muza-hpjSkU2UYSU-unsplash.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.kj-blog-image-4{
-    background-image: url(https://images.unsplash.com/photo-1516534775068-ba3e7458af70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fG5lcnZvdXN8ZW58MHx8fHwxNjcwODc1Njg2&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.kj-blog-image-5{
-    background-image: url(https://images.unsplash.com/photo-1543425389-f01c86221d15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDZ8fHZpc2liaWxpdHl8ZW58MHx8fHwxNjcyNjgzNjc4&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.km-blog-image-4{
-    background-image: url(https://images.unsplash.com/photo-1511225317751-5c2d61819d58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGZpbHRlcnxlbnwwfHx8fDE2NzEwMjgwMjA&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-
-.lower-author img{
-    object-fit: cover;
-}
 /*blog*/
-.blog-content{
-    color: #4a5568;
-    font-size: 1rem;
-    overflow: hidden;
-}
 .blog-content blockquote {
     border-left: 5px solid;
     border-color: #2d3748;
     margin: 20px 0 30px;
     padding-left: 20px;
 }
-.bog-content figure{
-    display: block;
-    margin-block-end: 1em;
-    margin-block-start: 1em;
-    margin-inline-end: 40px;
-    margin-inline-start: 40px;
-}
 .blog-content img{
     margin: 10px auto;
     max-width: 700px
 }
-.blog-image-bottom{
-    background-image: url(https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fHRvb2xzfGVufDB8fHx8MTY3MTU1NzUwMg&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.km1-blog-image-bottom{
-    background-image: url(https://images.unsplash.com/photo-1457904375453-3e1fc2fc76f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHx0YWJsZSUyMG1hdGhzfGVufDB8fHx8MTY3MTU1NTY0NQ&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.blog-image-bottom-k{
-    background-image: url(https://images.unsplash.com/photo-1516387938699-a93567ec168e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDV8fGxhcHRvcHxlbnwwfHx8fDE2NzEwOTgyNTM&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.blog-image-bottom-sherina{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/edvard-alexander-rolvaag-E75ZuAIpCzo-unsplash.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.blog-image-bottom-sherina2{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/gerald-schombs-GBDkr3k96DE-unsplash.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
 
-.blogimage2{
-    background-image: url(https://images.unsplash.com/photo-1550985543-49bee3167284?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fG1lYXN1cmV8ZW58MHx8fHwxNjcxMDI4MTU2&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.km-blogimage2{
-    background-image: url(https://images.unsplash.com/photo-1633526543814-9718c8922b7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGNhbGVuZGF8ZW58MHx8fHwxNjcxMDk3Njgy&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.s-blogimage2{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/clay-banks-U0-r0JMypE0-unsplash.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.s3-blogimage2{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/edvard-alexander-rolvaag-E75ZuAIpCzo-unsplash.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-
-.s-blogimage3{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/carlos-muza-hpjSkU2UYSU-unsplash.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.km-blogimage3{
-    background-image: url(https://images.unsplash.com/photo-1511225317751-5c2d61819d58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGZpbHRlcnxlbnwwfHx8fDE2NzEwMjgwMjA&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-.s4-blogimage3{
-    background-image: url(https://www.thedataschool.co.uk/content/images/2022/12/clay-banks-U0-r0JMypE0-unsplash.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
-
-.blogimage3{
-    background-image: url(https://images.unsplash.com/photo-1516534775068-ba3e7458af70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fG5lcnZvdXN8ZW58MHx8fHwxNjcwODc1Njg2&ixlib=rb-4.0.3&q=80&w=2000);
-    background-size: cover;
-    background-position: center center;
-    height: 200px;
-    cursor: pointer;
-}
 .blog-content h2{
     font-size: 1.7rem;
     margin-bottom: 0.7em;
@@ -487,16 +184,7 @@ a{
 }
 
 
-/*author*/
-.author-info-placement span:hover{
-    color: rgb(7 89 133/1);
-    background-color: rgb(224 242 252/1) 
-}
-
 /*footer*/
-.footer-container{
-    max-width: 1280px;
-}
 .-mx-3{
     margin-left: -1.25rem;
     margin-right: -1.25rem;
@@ -509,13 +197,7 @@ a{
     padding-right: 1.25rem;
     padding-left: 1.25rem;
 }
-.text-gray-600{
-    color:rgb(75 85 99/1);
-}
 
-.text-gray-400{
-    color: rgb(155 163 175/1);
-}
 .footer-nav-link a:hover{
    color: rgb(17 24 39/1);
 }
@@ -536,42 +218,14 @@ a{
     white-space: nowrap;
     width: 1px;
 }
-.h-6{
-    height: 1.5rem;
-}
-.w-6{
-    width: 1.5rem;
-}
-.w-4{
-    width: 1rem;
-}
-.h-4{
-    height:1rem
-}
-.fill-current{
-    fill: currentColor;
-}
+
 .rights-reserved{
     margin-top:2rem
 }
 
 /*media query*/
-@media screen and (min-width: 1280px){
-    .cards-col{
-        width: 25%;
-    }
-    
-} 
 
-@media screen and (min-width: 1024px) {
-    .px-6{
-        padding-right:2rem !important;
-        padding-left: 2rem !important;
-    }
-   
-}
-
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 576px) {
     .header-bg h2{
         font-size: 1.875rem;
         line-height: 2.25rem;
@@ -579,13 +233,9 @@ a{
         white-space: nowrap;
         overflow: hidden;
     }
-    .cohort select, .cohort button, .cohort ul, .search div> span{
+    .cohort select, .cohort ul, .search div> span{
         font-size: .875rem;
         line-height: 1.25rem;
-    }
-    .mpx-sm-4{
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
     }
     .mpx-sm-5{
         padding-left: 2rem !important;

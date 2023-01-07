@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>profile</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -19,16 +19,16 @@
   </head>
   <body class="body-background">
     <section id="header">
-      <div class="header-bg position-relative">
+      <div class="header-bg pb-4 pt-2 ">
         <div
-          class="header-txt-container mx-auto mpx-sm-4 px-3 px-6 d-flex max-w"
+          class="header-txt-container mx-auto px-sm-4 px-3 px-6 d-flex max-w"
         >
           <div class="txt-container">
             <div
               class="header-txt d-md-flex justify-content-md-between align-items-md-center mt-2"
             >
               <div class="flex min-w">
-                <h2 class="text-white fw-bold mb-0 fs lh-md">Kate Joyce</h2>
+                <h2 class="text-white fw-bold mb-0 fs-4 lh-md">Kate Joyce</h2>
               </div>
             </div>
             <div
@@ -44,15 +44,18 @@
     </section>
     <section id="profile">
       <div
-        class="profile-container py-3 px-2 mpx-sm-5 boxshadow-md bg-white rounded-1 max-w mx-auto d-flex"
+        class="profile-container py-3 px-2 px-sm-5 boxshadow-md bg-white rounded-1 max-w mx-auto d-flex"
       >
         <img
           src="https://www.thedataschool.co.uk/content/images/2022/12/AE4F7A57-51BF-45FF-8720-D2BFD38F4414.jpeg"
           alt=""
-          class="profile-image d-none d-md-block boxshadow-lg rounded-circle me-6 ms-3 mt-3"
+          class="profile-image d-none d-md-block boxshadow-lg rounded-circle me-6 ms-3 mt-3 img-fluid"
+          style=" height: 230px;
+          width: 230px;
+          object-fit: cover;"
         />
         <div class="profile-txt-container d-block">
-          <div class="profile-txt m-2 fs-6">
+          <div class="profile-txt m-2 fs-6 overflow-hidden text-gray-500">
             <p class="mb-3">
               Kate is originally from Ireland, where she graduated from Maynooth
               University with a Bachelors of Social Science Degree. During her
@@ -80,12 +83,13 @@
             class="profile-link"
           >
             <span
-              class="d-inline-flex text-gray-800 fw-medium lh-sm px-2 py-1 ms-1 fs-7 bg-gray-200 align-items-center rounded-2 cursor-pointer"
+              class="d-inline-flex text-gray-800 fw-medium lh-sm px-2 py-1 ms-1 fs-7 bg-gray-200 align-items-center rounded-2 "
             >
               <svg
-                class="fill-current text-gray-500 d-inline-block h-4 w-4 me-2 ms-0"
+                class="text-gray-500 d-inline-block h-4 w-4 me-2 ms-0"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 500 500"
+                fill = "currentColor"
               >
                 <g>
                   <path
@@ -103,13 +107,14 @@
             class="profile-link"
           >
             <span
-              class="d-inline-flex text-gray-800 fw-medium lh-sm px-2 py-1 ms-1 fs-7 bg-gray-200 align-items-center rounded-2 cursor-pointer"
+              class="d-inline-flex text-gray-800 fw-medium lh-sm px-2 py-1 ms-1 fs-7 bg-gray-200 align-items-center rounded-2"
             >
               <svg
-                class="fill-current text-gray-500 d-inline-block h-4 w-4 me-2 ms-1"
+                class=" text-gray-500 d-inline-block h-4 w-4 me-2 ms-1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 500 500"
                 style="padding-top: 1px; padding-bottom: 1px"
+                fill="currentColor"
               >
                 <path
                   class="st0"
@@ -126,12 +131,13 @@
             class="profile-link"
           >
             <span
-              class="d-inline-flex text-gray-800 fw-medium lh-sm px-2 py-1 ms-2 fs-7 bg-gray-200 align-items-center rounded-2 cursor-pointer"
+              class="d-inline-flex text-gray-800 fw-medium lh-sm px-2 py-1 ms-2 fs-7 bg-gray-200 align-items-center rounded-2 "
             >
               <svg
-                class="fill-current text-gray-500 d-inline-block h-4 w-4 me-2 ms-1"
+                class=" text-gray-500 d-inline-block h-4 w-4 me-2 ms-1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 85 85"
+                fill="currentColor"
               >
                 <g>
                   <path
@@ -149,13 +155,14 @@
             class="profile-link"
           >
             <span
-              class="d-inline-flex text-gray-800 fw-medium lh-sm px-2 py-1 ms-2 fs-7 bg-gray-200 align-items-center rounded-2 cursor-pointer"
+              class="d-inline-flex text-gray-800 fw-medium lh-sm px-2 py-1 ms-2 fs-7 bg-gray-200 align-items-center rounded-2 "
             >
               <svg
-                class="fill-current text-gray-500 d-inline-block h-4 w-4 me-2 ms-1"
+                class=" text-gray-500 d-inline-block h-4 w-4 me-2 ms-1"
                 xmlns="http://www.w3.org/2000/svg"
                 style="padding-top: 1px; padding-bottom: 2px"
                 viewBox="0 0 85 85"
+                fill="currentColor"
               >
                 <g>
                   <path
@@ -173,19 +180,19 @@
             <div>
               <a href="index.html">
                 <span
-                  class="d-inline-flex align-items-center px-2 py-1 me-2 mb-2 bg-gray-200 text-gray-800 fs-7 rounded-2 lh-sm cursor-pointer"
+                  class="d-inline-flex align-items-center px-2 py-1 me-2 mb-2 bg-gray-200 text-gray-800 fs-7 rounded-2 lh-sm"
                   >DS 37</span
                 >
               </a>
               <a href="index.html">
                 <span
-                  class="d-inline-flex align-items-center px-2 py-1 me-2 mb-2 bg-gray-200 text-gray-800 fs-7 rounded-2 lh-sm cursor-pointer"
+                  class="d-inline-flex align-items-center px-2 py-1 me-2 mb-2 bg-gray-200 text-gray-800 fs-7 rounded-2 lh-sm"
                   >In Training</span
                 >
               </a>
               <a href="index.html">
                 <span
-                  class="d-inline-flex align-items-center px-2 py-1 mb-2 bg-gray-200 text-gray-800 fs-7 rounded-2 lh-sm cursor-pointer"
+                  class="d-inline-flex align-items-center px-2 py-1 mb-2 bg-gray-200 text-gray-800 fs-7 rounded-2 lh-sm "
                   >London, UK</span
                 >
               </a>
@@ -201,13 +208,13 @@
             class="bg-white mx-auto max-w-sm boxshadow-md rounded-1 overflow-hiden"
           >
             <a href="blogkate.html">
-              <div class="align-content-center kj-blog-image"></div>
+              <div class="align-content-center kj-blog-image"> <img src="/images/kateblog-1.jfif" alt="" class="img-fluid  w-100" style="height: 200px; object-fit:cover"></div>
             </a>
             <div class="blog-content py-3 px-4">
               <div class="blog-title mb-2">
                 <a href="blogkate.html">
                   <div
-                    class="fw-bold text-dark cursor-pointer lh-md fs-5"
+                    class="fw-bold text-dark  lh-md fs-5"
                   >Preparation for the Alteryx Core Certification - What do the tools do?</div>
                 </a>
               </div>
@@ -223,10 +230,11 @@
                 src="https://www.thedataschool.co.uk/content/images/2022/12/AE4F7A57-51BF-45FF-8720-D2BFD38F4414.jpeg"
                 alt=""
                 class="w-10 h-10 me-3 rounded-circle"
+                style="object-fit: cover;"
               />
               <div class="fs-7 lh-sm">
                 <a href="profilekate.html">
-                  <div class="cursor-pointer">
+                  <div class="">
                     <p class="text-gray-900 lh-n">Kate Joyce</p>
                   </div>
                 </a>
@@ -240,12 +248,12 @@
             class="bg-white mx-auto max-w-sm boxshadow-md rounded-1 overflow-hiden"
           >
             <a href="blogkate2.html">
-              <div class="align-content-center kj-blog-image-2"></div>
+              <div class="align-content-center kj-blog-image-2"> <img src="/images/kateblog-2.jfif" alt="" class="img-fluid  w-100" style="height: 200px; object-fit:cover"></div>
             </a>
             <div class="blog-content py-3 px-4">
               <div class="blog-title mb-2">
                 <a href="blogkate2.html">
-                  <div class="fw-bold text-dark cursor-pointer lh-md fs-5">
+                  <div class="fw-bold text-dark  lh-md fs-5">
                     An (Updated) look back on my Final Dashboard Application -
                     What could I have done better?
                   </div>
@@ -261,10 +269,11 @@
                 src="https://www.thedataschool.co.uk/content/images/2022/12/AE4F7A57-51BF-45FF-8720-D2BFD38F4414.jpeg"
                 alt=""
                 class="w-10 h-10 me-3 rounded-circle"
+                style="object-fit: cover;"
               />
               <div class="fs-7 lh-sm">
                 <a href="profilekate.html">
-                  <div class="cursor-pointer">
+                  <div class="">
                     <p class="text-gray-900 lh-n">Kate Joyce</p>
                   </div>
                 </a>
@@ -278,12 +287,13 @@
             class="bg-white mx-auto max-w-sm boxshadow-md rounded-1 overflow-hiden"
           >
             <a href="blogkate3.html">
-              <div class="align-content-center kj-blog-image-3"></div>
+              <div class="align-content-center kj-blog-image-3"><img src="/images/kateblog-3.jfif" alt="" class="img-fluid  w-100" style="height: 200px; object-fit:cover"></div>
             </a>
             <div class="blog-content py-3 px-4">
               <div class="blog-title mb-2">
                 <a href="blogkate3.html">
-                  <div class="fw-bold text-dark cursor-pointer lh-md fs-5">
+                  <div class="fw-bold text-dark 
+                   lh-md fs-5">
                     How to Create a Dynamic Measure on Tableau
                   </div>
                 </a>
@@ -302,10 +312,11 @@
                 src="https://www.thedataschool.co.uk/content/images/2022/12/AE4F7A57-51BF-45FF-8720-D2BFD38F4414.jpeg"
                 alt=""
                 class="w-10 h-10 me-3 rounded-circle"
+                style="object-fit: cover;"
               />
               <div class="fs-7 lh-sm">
                 <a href="profilekate.html">
-                  <div class="cursor-pointer">
+                  <div class="">
                     <p class="text-gray-900 lh-n">Kate Joyce</p>
                   </div>
                 </a>
@@ -320,12 +331,12 @@
             class="bg-white mx-auto max-w-sm boxshadow-md rounded-1 overflow-hiden"
           >
             <a href="blogkate4.html">
-              <div class="align-content-center kj-blog-image-4"></div>
+              <div class="align-content-center kj-blog-image-4"><img src="/images/kateblog-4.jfif" alt="" class="img-fluid  w-100" style="height: 200px; object-fit:cover"></div>
             </a>
             <div class="blog-content py-3 px-4">
               <div class="blog-title mb-2">
                 <a href="blogkate4.html">
-                  <div class="fw-bold text-dark cursor-pointer lh-md fs-5">
+                  <div class="fw-bold text-dark  lh-md fs-5">
                     My First Week in the Data School - DS37
                   </div>
                 </a>
@@ -344,10 +355,11 @@
                 src="https://www.thedataschool.co.uk/content/images/2022/12/AE4F7A57-51BF-45FF-8720-D2BFD38F4414.jpeg"
                 alt=""
                 class="w-10 h-10 me-3 rounded-circle"
+                style="object-fit: cover;"
               />
               <div class="fs-7 lh-sm">
                 <a href="profilekate.html">
-                  <div class="cursor-pointer">
+                  <div class="">
                     <p class="text-gray-900 lh-n">Kate Joyce</p>
                   </div>
                 </a>
@@ -361,12 +373,12 @@
             class="bg-white mx-auto max-w-sm boxshadow-md rounded-1 overflow-hiden"
           >
             <a href="blogkate5.html">
-              <div class="align-content-center kj-blog-image-5"></div>
+              <div class="align-content-center kj-blog-image-5"><img src="/images/kateblog-5.jfif" alt="" class="img-fluid w-100" style="height: 200px; object-fit:cover"></div>
             </a>
             <div class="blog-content py-3 px-4">
               <div class="blog-title mb-2">
                 <a href="blogkate5.html">
-                  <div class="fw-bold text-dark cursor-pointer lh-md fs-5">
+                  <div class="fw-bold text-dark  lh-md fs-5">
                     Intro to Dynamic Zone Visibility in Tableau (The Easy Way) - Part 1
                   </div>
                 </a>
@@ -381,10 +393,11 @@
                 src="https://www.thedataschool.co.uk/content/images/2022/12/AE4F7A57-51BF-45FF-8720-D2BFD38F4414.jpeg"
                 alt=""
                 class="w-10 h-10 me-3 rounded-circle"
+                style="object-fit: cover;"
               />
               <div class="fs-7 lh-sm">
                 <a href="profilekate.html">
-                  <div class="cursor-pointer">
+                  <div class="">
                     <p class="text-gray-900 lh-n">Kate Joyce</p>
                   </div>
                 </a>
@@ -395,100 +408,75 @@
         </div>
       </div>
     </section>
-    <section id="footer" class="bg-white">
-      <div
-        class="footer-container py-5 px-6 mpx-sm-4 px-3 overflow-hidden mx-auto"
-      >
-        <nav
-          class="footer-nav d-flex justify-content-center flex-wrap -mx-3 -my-2"
-        >
-          <div class="footer-nav-link py-2">
-            <a class="fs-6 lh-base text-gray-600" href="http://">Home</a>
+    <section id="footer" class= "bg-white">
+      <div class="footer-container py-5 px-6 px-sm-4 px-3 overflow-hidden mx-auto max-w">
+          <nav class="footer-nav d-flex justify-content-center flex-wrap -mx-3 -my-2">
+              <div class="footer-nav-link py-2">
+                  <a class="fs-6 lh-base text-gray-600" href="http://">Home</a>
+              </div>
+              <div class="footer-nav-link py-2">
+                  <a class="fs-6 lh-base text-gray-600" href="http://">Team</a>
+              </div>
+              <div class="footer-nav-link py-2">
+                  <a class="fs-6 lh-base text-gray-600" href="http://">Blog</a>
+              </div>
+              <div class="footer-nav-link py-2">
+                  <a class="fs-6 lh-base text-gray-600" href="http://">Locations</a>
+              </div>
+              <div class="footer-nav-link py-2">
+                  <a class="fs-6 lh-base text-gray-600" href="http://">Events</a>
+              </div>
+              <div class="footer-nav-link py-2">
+                  <a class="fs-6 lh-base text-gray-600" href="http://">Partnerships</a>
+              </div>
+              <div class="footer-nav-link py-2">
+                  <a class="fs-6 lh-base text-gray-600" href="http://">Apply</a>
+              </div>
+              <div class="footer-nav-link py-2">
+                  <a class="fs-6 lh-base text-gray-600" href="http://">Hire a Consultant</a>
+              </div>
+          </nav>
+          <div class="social-media d-flex justify-content-center ">
+              <a href="http://" target="_blank" rel="noopener noreferrer" class="text-gray-400">
+                  <span class="sr-only">Facebook</span>
+                  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path fill-rule="evenodd"
+                          d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                          clip-rule="evenodd">
+                      </path>
+                  </svg>
+              </a>
+              <a href="http://" target="_blank" rel="noopener noreferrer" class="ms-4 text-gray-400">
+                  <span class="sr-only">Facebook</span>
+                  <svg class=" text-grey-500 d-inline-block h-4 w-4 ms-2 me-1" fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 85">
+                      <g>
+                          <path
+                              d="M1.7,28.4h17.5v56.2H1.7V28.4z M10.5,0.5c5.6,0,10.1,4.5,10.1,10.1s-4.5,10.1-10.1,10.1S0.3,16.2,0.3,10.6l0,0 C0.3,5,4.9,0.5,10.5,0.5">
+                          </path>
+                          <path
+                              d="M30.2,28.4h16.7V36h0.3c3.4-5.8,9.8-9.3,16.5-9.1c17.7,0,20.9,11.6,20.9,26.7v30.8H67.1V57.2c0-6.5-0.1-14.9-9.1-14.9 s-10.5,7.1-10.5,14.4v27.8H30.2V28.4z">
+
+                          </path>
+                      </g>
+                  </svg>
+              </a>
+              <a href="http://" target="_blank" rel="noopener noreferrer" class="ms-4 text-gray-400">
+                  <span class="sr-only">Facebook</span>
+                  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                          d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+
+                      </path>
+                  </svg>
+              </a>
           </div>
-          <div class="footer-nav-link py-2">
-            <a class="fs-6 lh-base text-gray-600" href="http://">Team</a>
+          <div class="rights-reserved">
+              <p class="text-gray-400 lh-base fs-6 text-center">
+                  © 2022 The Information Lab Ltd. All rights reserved
+              </p>
           </div>
-          <div class="footer-nav-link py-2">
-            <a class="fs-6 lh-base text-gray-600" href="http://">Blog</a>
-          </div>
-          <div class="footer-nav-link py-2">
-            <a class="fs-6 lh-base text-gray-600" href="http://">Locations</a>
-          </div>
-          <div class="footer-nav-link py-2">
-            <a class="fs-6 lh-base text-gray-600" href="http://">Events</a>
-          </div>
-          <div class="footer-nav-link py-2">
-            <a class="fs-6 lh-base text-gray-600" href="http://"
-              >Partnerships</a
-            >
-          </div>
-          <div class="footer-nav-link py-2">
-            <a class="fs-6 lh-base text-gray-600" href="http://">Apply</a>
-          </div>
-          <div class="footer-nav-link py-2">
-            <a class="fs-6 lh-base text-gray-600" href="http://"
-              >Hire a Consultant</a
-            >
-          </div>
-        </nav>
-        <div class="social-media d-flex justify-content-center">
-          <a
-            href="http://"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-gray-400"
-          >
-            <span class="sr-only">Facebook</span>
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                fill-rule="evenodd"
-                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </a>
-          <a
-            href="http://"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="ms-4 text-gray-400"
-          >
-            <span class="sr-only">Facebook</span>
-            <svg
-              class="fill-current text-grey-500 d-inline-block h-4 w-4 ms-2 me-1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 85 85"
-            >
-              <g>
-                <path
-                  d="M1.7,28.4h17.5v56.2H1.7V28.4z M10.5,0.5c5.6,0,10.1,4.5,10.1,10.1s-4.5,10.1-10.1,10.1S0.3,16.2,0.3,10.6l0,0 C0.3,5,4.9,0.5,10.5,0.5"
-                ></path>
-                <path
-                  d="M30.2,28.4h16.7V36h0.3c3.4-5.8,9.8-9.3,16.5-9.1c17.7,0,20.9,11.6,20.9,26.7v30.8H67.1V57.2c0-6.5-0.1-14.9-9.1-14.9 s-10.5,7.1-10.5,14.4v27.8H30.2V28.4z"
-                ></path>
-              </g>
-            </svg>
-          </a>
-          <a
-            href="http://"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="ms-4 text-gray-400"
-          >
-            <span class="sr-only">Facebook</span>
-            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
-              ></path>
-            </svg>
-          </a>
-        </div>
-        <div class="rights-reserved">
-          <p class="text-gray-400 lh-base fs-6 text-center">
-            © 2022 The Information Lab Ltd. All rights reserved
-          </p>
-        </div>
       </div>
-    </section>
+  </section>
   </body>
 </html>
